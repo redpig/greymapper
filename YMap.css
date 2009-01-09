@@ -1,0 +1,109 @@
+﻿
+input {
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 12px;
+}
+
+
+.nodeDiv {
+	position:absolute;
+	padding:2px;
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 12px;
+	color:#303030;
+	white-space:nowrap;
+	word-wrap:normal;
+
+	border:none;
+
+	cursor:pointer;
+	z-index:10;
+}
+
+.nodeEdit {
+	padding:2px;
+
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 12px;
+	color:#ff0000;
+
+	background-color:#ffffff;
+
+	border:solid 1px gray;
+	z-index:20;
+}
+
+.linker {
+	position:absolute;
+	z-index:0;
+}
+
+
+.popupMenu {
+	position:absolute;
+	white-space:nowrap;
+	word-wrap:normal;
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 12px;
+	background-Color:white;
+	border:solid 1px gray;
+	z-index:100;
+}
+
+.menuItem {
+	height:20px;
+	color:black;
+	cursor:pointer;
+	background-color:white;
+}
+
+.icon {
+	height:20px;
+	width:24px;
+}
+
+.text {
+	width:160px;
+}
+
+.key {
+	width:90px;
+}
+
+.sub {
+	width:15px;
+}
+
+.split {
+	height:1px;
+	background-color:gray;
+}
+
+.highlightItem {
+	height:20px;
+	color:white;
+	cursor:pointer;
+	background-color:#808080;
+}
+
+.toolbarMenu {
+	position:absolute;
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 12px;
+	background-Color:#ece9d8;
+	border-top:solid 1px #ffffff;
+	border-bottom:solid 1px #7f9db9;
+	z-index:90;
+}
+
+.toolButton {
+	padding:3px;
+	cursor:pointer;
+}
+
+.vsplit {
+	padding:0px;
+	margin:0px;
+	width:1px;
+	background-color:gray;
+}
