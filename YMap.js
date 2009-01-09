@@ -103,6 +103,7 @@ function keyPress(evt) {
 				g_YView.navigateNode( code, evt.shiftKey);
 			}
 			break;
+		case YKEYCODE_TAB:
 		case YKEYCODE_INSERT:
 			if ( g_YView.getSelectedNodeCount() == 1 ) {
 				node = g_YView.getLastSelectedNode();
@@ -387,6 +388,7 @@ function NodeEditEnd(obj, nodeID) {
 
 ///////////////////////////////////////////////////////////
 // Key Code
+YKEYCODE_TAB		= 9;
 YKEYCODE_ENTER		= 13;
 
 YKEYCODE_SPACE		= 32;
