@@ -1,4 +1,8 @@
 ﻿
+body {
+	margin: 0px;
+}
+
 #panelDOM {
 	position: absolute;
 	width: 100%;
