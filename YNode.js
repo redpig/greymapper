@@ -349,8 +349,6 @@ YNode.prototype.detachChild = function (node) {
 	return false;
 }
 
-// remove all child nodes.
-// if bSelf is true remove itself.
 YNode.prototype.removeChildren = function ( pos ) {
 	for ( var i=this.childNodes.length-1; i >= 0; i-- ) {
 		var node = g_YTree.nodes[this.childNodes[i]];
