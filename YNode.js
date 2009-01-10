@@ -325,9 +325,6 @@ YNode.prototype.changeIndent = function(indent) {
 }
 
 YNode.prototype.detachChild = function (node) {
-	// javascript does not remove array element by deleting
-	// Splice is the only one method that I know which really elimintes
-	// array element
 	for ( var i=0; i<this.childNodes.length; i++ ) {
 		if ( this.childNodes[i] == node.id ) {
 			var pnode = node.prevNode;
