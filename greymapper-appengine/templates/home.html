@@ -1,0 +1,35 @@
+<html>
+  <head><title>GreyMapper: another web-based mind mapper</title></head>
+  <body>
+  Welcome back to GreyMapper!
+  <br/><br/>
+  <a href="/map/">Start a new mind map</a>
+  <br/><br/>
+  Your maps:
+  <table>
+  <tr><td>Name</td><td>Date</td></tr>
+  {% for mm in your_maps %}
+  <tr><td><a href="/map/{{ mm.key.id }}">{{ mm.title }}</a></td><td>{{ mm.modified }}</td></tr>
+  {% endfor %}
+  </table>
+  <br/><br/>
+  Friends' maps:
+  <table>
+  <tr><td>Name</td><td>Owner</td></tr>
+  {% for mm in friend_maps %}
+  <tr><td><a href="/map/{{ mm.key.id }}">{{ mm.title }}</a></td><td>{{ mm.modified }}</td></tr>
+  {% endfor %}
+  </table>
+  <br/><br/>
+  Recently, public mind maps:
+  <table>
+  <tr><td>Name</td><td>Owner</td></tr>
+  {% for mm in recent_maps %}
+  <tr><td><a href="/map/{{ mm.key.id }}">{{ mm.title }}</a></td><td>{{ mm.modified }}</td></tr>
+  {% endfor %}
+  </table>
+  <a href="{{logout_url}}">logout</a>
+  <small>This site is based on <a href="http://mindweb.sourceforge.net/">MindWeb</a> and powered by Google's AppEngine. If you'd like to contribute or run your own private instance, check out the code <a href="http://github.com/robholland/mindweb/tree/master">here</a></small>
+  </body>
+</html>
+

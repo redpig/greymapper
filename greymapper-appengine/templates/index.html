@@ -1,0 +1,18 @@
+<html>
+  <head><title>GreyMapper: another web-based mind mapper</title></head>
+  <body>
+  Welcome to GreyMapper!<br/>
+
+  If you'd like to manage your own mind maps, you'll want to <a
+    href="{{login_url}}">login</a>.  If you just need to create a quick mind map and save it
+  to your local machine, <a href="/map/anon">don't let us stop you</a>!
+  <br/><br/>
+  Recently shared mind maps:
+  <table>
+  <tr><td>Name</td><td>Author</td></tr>
+  {{ recent_maps }}
+  </table>
+  <small>This site is based on <a href="http://mindweb.sourceforge.net/">MindWeb</a> and powered by Google's AppEngine. If you'd like to contribute or run your own private instance, check out the code <a href="http://github.com/robholland/mindweb/tree/master">here</a></small>
+  </body>
+</html>
+

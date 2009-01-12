@@ -1,0 +1,28 @@
+application: greymapper
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /map/ui/
+  static_dir: mindweb/ui/
+- url: /map/icons/
+  static_dir: mindweb/icons/
+- url: /map/js/
+  static_dir: static/js
+- url: /map/YMap.css
+  static_files: mindweb/YMap.css
+  upload: mindweb/YMap.css
+- url: /map/YMap.js
+  static_files: mindweb/YMap.js
+  upload: mindweb/YMap.js
+- url: /map/YTree.js
+  static_files: mindweb/YTree.js
+  upload: mindweb/YTree.js
+- url: /map/YView.js
+  static_files: mindweb/YView.js
+  upload: mindweb/YView.js
+- url: /.*
+  script: greymapper.py
+  secure: optional
+
