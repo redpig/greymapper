@@ -318,7 +318,11 @@ function clickMenu(evt, obj) {
 		var strTXT = g_YView.tree.exportToText(false);
 		var strTitle = g_YView.getContentTitle();
 		
-		// append your save code
+		// If the function mindweb_save is defined
+		// call it to save.
+		if (mindweb_save) {
+			mindweb_save(strTitle, strXML, strTXT);
+		}
 		
 	} else if ( obj.id == "menuConvertMap" ) {
 		g_YView.toggleContentView();
