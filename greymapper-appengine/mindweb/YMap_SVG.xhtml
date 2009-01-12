@@ -9,10 +9,15 @@
 <script type="text/javascript" src="YTree.js"></script>
 <script type="text/javascript" src="YView.js"></script>
 <script type="text/javascript" src="YMap.js"></script>
+<script type="text/javascript" src="js/mindweb_save.js"></script>
+<script type="text/javascript" src="js/mindweb_init.js"></script>
 <script type="text/javascript">
 <![CDATA[
 
 function init() {
+  if (mindweb_init) {
+    mindweb_init();
+  } else {
 	var yTree = new YTree();
 	rNode = yTree.createRootNode("한");
 
@@ -37,6 +42,7 @@ function init() {
 	//var yView = new YView(yTree, document.getElementById("panelDOM"), document.getElementById("panelSVG"));
 	var yView = new YView(yTree, document.getElementById("panelDOM"), document.getElementById("panelSVG"));
 	yView.drawNode(rNode, true);
+  }
 }
 
 ]]>
