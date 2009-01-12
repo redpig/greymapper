@@ -8,7 +8,9 @@ function mindweb_save(title, xml, txt) {
   xhr.onreadystatechange = function() {
     if (xhr.readyState == 4) {
       if(xhr.status == 200) {
-        if (window.location.href != xhr.responseText) {
+        var revUrl = window.location.protocol + '//' +
+                     window.location.host + xhr.responseText;
+        if (window.location.href != revUrl) {
           window.location.href = xhr.responseText;
         }
       } else {
