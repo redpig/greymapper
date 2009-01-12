@@ -19,6 +19,9 @@ handlers:
 - url: /map/YTree.js
   static_files: mindweb/YTree.js
   upload: mindweb/YTree.js
+- url: /map/YNode.js
+  static_files: mindweb/YNode.js
+  upload: mindweb/YNode.js
 - url: /map/YView.js
   static_files: mindweb/YView.js
   upload: mindweb/YView.js

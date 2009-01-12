@@ -16,7 +16,11 @@
 
 function init() {
   if (mindweb_init) {
-    mindweb_init();
+    // TODO: move to a templated js
+    var title = "{{title|escape}}";
+    var id = parseInt("{{id|escape}}");
+    var revision = parseInt("{{revision|escape}}");
+    mindweb_init(id, title, revision);
   } else {
 	var yTree = new YTree();
 	rNode = yTree.createRootNode("한");

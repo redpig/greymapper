@@ -1,11 +1,7 @@
-function mindweb_init() {
+function mindweb_init(id, title, revision) {
 // Extract YTree id from url and load unles it is missing -- then this is new.
 	var yTree = new YTree();
   var rNode = null;
-  var title = "{{title|escape}}";
-  var id = parseInt("{{id|escape}}");
-  var revision = parseInt("{{revision|escape}}");
-
   if (id) {
     rNode = yTree.createRootNode("Loading...");
   } else {
