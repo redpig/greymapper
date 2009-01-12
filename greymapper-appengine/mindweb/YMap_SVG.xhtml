@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>YMap</title>
+<link href="YMap.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="YNode.js"></script>
+<script type="text/javascript" src="YTree.js"></script>
+<script type="text/javascript" src="YView.js"></script>
+<script type="text/javascript" src="YMap.js"></script>
+<script type="text/javascript">
+<![CDATA[
+
+function init() {
+	var yTree = new YTree();
+	rNode = yTree.createRootNode("한");
+
+	ANode = rNode.appendChild("Javascript");
+		AANode = ANode.appendChild("MindWeb");
+		ABNode = ANode.appendChild("SNOW");
+
+	BNode = rNode.appendChild("Python");
+		BANode = BNode.appendChild("Berkeley DB");
+		BBNode = BNode.appendChild("Berkeley DBXML");
+		BCNode = BNode.appendChild("Oracle");
+	
+	CNode = rNode.appendChild("Graphics & < > \"");
+	
+	sNode = CNode.appendSibling("Flash",1);
+	
+	tNode = CNode.appendSibling("Yep",1);
+	tNode.appendIcon("attach");
+
+	ANode.collapsed = true;
+	
+	//var yView = new YView(yTree, document.getElementById("panelDOM"), document.getElementById("panelSVG"));
+	var yView = new YView(yTree, document.getElementById("panelDOM"), document.getElementById("panelSVG"));
+	yView.drawNode(rNode, true);
+}
+
+]]>
+</script>
+
+</head>
+
+<body onload="init();">
+
+<div id="panelDOM">
+<svg id="panelSVG" xmlns="http://www.w3.org/2000/svg" version="1.1" ></svg>
+</div>
+
+</body>
+
+</html>
